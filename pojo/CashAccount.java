@@ -28,7 +28,6 @@ public class CashAccount extends TradeAccount {
         this.cashBalance = cashBalance;
     }
 
-
     @Override
     public TradeAccount clone() {
         return new CashAccount(this);
