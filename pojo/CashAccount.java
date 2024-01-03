@@ -32,4 +32,12 @@ public class CashAccount extends TradeAccount {
     public TradeAccount clone() {
         return new CashAccount(this);
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " cashBalance='" + getCashBalance() + "'" +
+            "}";
+    }
+
 }
