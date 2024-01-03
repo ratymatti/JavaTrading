@@ -5,7 +5,7 @@ public abstract class TradeAccount {
 
 
     public TradeAccount(String id) {
-        this.id = id;
+        setId(id);
     }
 
 
@@ -14,6 +14,9 @@ public abstract class TradeAccount {
     }
 
     public void setId(String id) {
+        if (id == null || id.isBlank()) {
+            throw new IllegalArgumentException("ID cannot be null or blank.");
+        }
         this.id = id;
     }
 
