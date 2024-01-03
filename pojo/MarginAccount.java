@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class MarginAccount extends TradeAccount {
     private BigDecimal margin;
 
-    public MarginAccount(BigDecimal margin, String id) {
+    public MarginAccount(String id, BigDecimal margin) {
         super(id);
         setMargin(margin);
     }
