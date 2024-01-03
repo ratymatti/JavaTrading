@@ -22,6 +22,12 @@ public class TradeAccountRepository {
         }
         this.datastore.replace(tradeAccount.getId(), tradeAccount.clone());
     }
-    
 
+    public void deleteTradeAccount(String id) {
+        if (!datastore.containsKey(id)) {
+            throw new IllegalArgumentException("TradeAccount with ID " + id + " does not exist.");
+        }
+        this.datastore.remove(id);
+    }
+    
 }
