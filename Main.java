@@ -8,7 +8,6 @@ import constants.TradeAccountType;
 import constants.Transaction;
 import pojo.CashAccount;
 import pojo.MarginAccount;
-import pojo.TradeAccount;
 import repository.TradeAccountRepository;
 import service.CashAccountService;
 import service.MarginAccountService;
