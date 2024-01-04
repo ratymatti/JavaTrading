@@ -9,6 +9,12 @@ public class CashAccountService implements TradeAccountService {
 
     private TradeAccountRepository repository;
 
+
+    public CashAccountService(TradeAccountRepository repository) {
+        this.repository = repository;
+    }
+
+
     @Override
     public void deposit(String id, BigDecimal amount) {
         CashAccount account = retrieveTradeAccount(id);

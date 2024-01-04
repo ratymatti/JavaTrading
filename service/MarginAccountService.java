@@ -9,6 +9,12 @@ public class MarginAccountService implements TradeAccountService {
 
     private TradeAccountRepository repository;
 
+
+    public MarginAccountService(TradeAccountRepository repository) {
+        this.repository = repository;
+    }
+
+
     @Override
     public void deposit(String id, BigDecimal amount) {
         MarginAccount account = retrieveTradeAccount(id);    
