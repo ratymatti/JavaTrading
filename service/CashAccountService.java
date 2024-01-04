@@ -18,7 +18,9 @@ public class CashAccountService implements TradeAccountService {
 
     @Override
     public void withdraw(String id, BigDecimal amount) {
-        
+        CashAccount account = retrieveTradeAccount(id);
+        account.setCashBalance(account.getCashBalance().subtract(amount));
+        updateTradeAccount(account);
     }
 
     public CashAccount retrieveTradeAccount(String id) {
@@ -27,5 +29,13 @@ public class CashAccountService implements TradeAccountService {
 
     public void updateTradeAccount(CashAccount tradeAccount) {
         this.repository.updateTradeAccount(tradeAccount);
+    }
+
+    public void deleteTradeAccount(String id) {
+        this.repository.deleteTradeAccount(id);
+    }
+
+    public void createTradeAccount(CashAccount tradeAccount) {
+        this.repository.createTradeAccount(tradeAccount);
     }
 }
