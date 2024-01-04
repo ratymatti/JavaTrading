@@ -33,11 +33,12 @@ public class CashAccount extends TradeAccount {
         return new CashAccount(this);
     }
 
+    /*
     @Override
     public String toString() {
         return "{" +
             " cashBalance='" + getCashBalance() + "'" +
             "}";
     }
-
+    */
 }

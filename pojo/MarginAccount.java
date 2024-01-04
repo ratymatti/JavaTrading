@@ -31,12 +31,12 @@ public class MarginAccount extends TradeAccount {
     public TradeAccount clone() {
         return new MarginAccount(this);
     }
-
+    /* 
     @Override
     public String toString() {
         return "{" +
             " margin='" + getMargin() + "'" +
             "}";
     }
-
+    */
 }
